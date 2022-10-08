@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Footer } from "./components/Footer/Footer";
+import Note from "./components/Note/Note";
+import Header from "./components/Header/Header";
+
+//1. Create a new React app.
+//2. Create a App.jsx component.
+//3. Create a Header.jsx component that renders a <header> element
+//to show the Keeper App name in an <h1>.
+//4. Create a Footer.jsx component that renders a <footer> element
+//to show a copyright message in a <p> with a dynamically updated year.
+//5. Create a Note.jsx component to show a <div> element with a
+//<h1> for a title and a <p> for the content.
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Note />
+      <Footer />
     </div>
   );
 }
