@@ -1,7 +1,8 @@
 import "./App.css";
 import { Footer } from "./components/Footer/Footer";
-import Note from "./components/Note/Note";
 import Header from "./components/Header/Header";
+import Note from "./components/Note/Note";
+import notes from "./components/notes";
 
 //1. Create a new React app.
 //2. Create a App.jsx component.
@@ -16,7 +17,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Note />
+      {notes.map((noteItem) => (
+        <Note
+          key={noteItem.key}
+          title={noteItem.title}
+          content={noteItem.content}
+        />
+      ))}
       <Footer />
     </div>
   );
